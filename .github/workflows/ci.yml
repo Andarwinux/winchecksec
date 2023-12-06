@@ -1,16 +1,7 @@
 name: CI
 
 on:
-  release:
-    types:
-      - published
-  push:
-    branches:
-      - master
-  pull_request:
-  schedule:
-    # run CI every day even if no PRs/merges occur
-    - cron:  '0 12 * * *'
+  workflow_dispatch:
 
 env:
   vcpkg-commit: 90b5fb836cda4eba4569a123bca63b957f55232b
