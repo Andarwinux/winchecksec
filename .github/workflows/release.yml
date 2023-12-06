@@ -15,7 +15,7 @@ jobs:
       env:
         # NOTE(ww): GitHub actions doesn't allow workflows to trigger other workflows
         # by default. The workaround is to use a PAT instead of the default GITHUB_TOKEN.
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
         release_name: ${{ github.ref }}
