@@ -90,8 +90,8 @@ jobs:
       run:
         7z a build.zip build
 
-      - name: upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: windows-build
-          path: build.zip
+    - name: upload
+      uses: actions/upload-artifact@v3
+      with:
+        name: windows-build
+        path: build.zip
